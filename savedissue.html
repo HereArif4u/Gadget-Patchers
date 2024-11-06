@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/browse/boxicons@2.1.4/css/boxicons.css">
+    <title>Gadget Patchers</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <br>
+    <br>
+    <br>
+    <marquee scrollamount="5" bgcolor="white" height="25px"> | Gadget Patchers : Where gadgets get a second chance |</marquee>
+
+    <div id="mainer" style="font-size: 18px;">
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <img src="GPImages/GP.png" alt=""></i>Gadget Patchers
+      </div>
+
+      <div class="navbar_content">
+        <i class="bi bi-grid"></i>
+        <i class='bx bx-sun' id="darkLight"></i>
+        <i class='bx bx-bell' ></i>
+        <img src="GPImages/user.png" alt="" class="profile" />
+      </div>
+    </nav>
+
+    <!-- sidebar -->
+    <nav class="sidebar">
+      <div class="menu_content">
+        <ul class="menu_items">
+          <div class="menu_title menu_dahsboard">
+          </div>
+          <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+          <!-- start -->
+          <li class="item">
+            <a href="First.html#home" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-home-alt"></i>
+              </span>
+             
+              <span class="navlink">Home</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </a>
+            
+            
+          
+            
+            <ul class="menu_items submenu">
+              <a href="#ourservices" class="nav_link sublink">Our Services</a>
+              
+              <a href="#works" class="nav_link sublink">How Our<br>Website works?</a>
+              <a href="#warrenty" class="nav_link sublink">Issued Warrenty's</a>
+              <a href="#FAQ's" class="nav_link sublink">FAQ's</a>
+            </ul>
+          <!-- end -->
+
+          <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+          <!-- start -->
+          <li class="item">
+            <a href="saveyourissue.html#save" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-save"></i>
+              </span>
+              <span class="navlink">Save Your Repair<br>Issue</span>
+            </a>
+
+          <li class="item">
+            <a href="nearbystore.html#repairstore" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-map"></i>
+              </span>
+              <span class="navlink">Your Nearby Repair<br>Store's</span>
+            </a>
+
+            <li class="item">
+              <a href="repairstatus.html#status" class="nav_link submenu_item">
+                <span class="navlink_icon">
+                  <i class="bx bx-loader-circle"></i>
+                </span>
+                <span class="navlink">Status of Your<br>Repair Issue</span>
+              </a>
+  
+          <!-- end -->
+        </ul>
+
+
+        <ul class="menu_items">
+          <div class="menu_title menu_setting"></div>
+           
+          <li class="item">
+            <a href="savedissue.html#saved" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-collection"></i>
+              </span>
+              <span class="navlink">Saved Repair Issue's</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="account.html#account" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-user"></i>
+              </span>
+              <span class="navlink">Profile</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-flag"></i>
+              </span>
+              <span class="navlink">Notice</span>
+            </a>
+          </li>
+        </ul>
+         <!-- Sidebar Open / Close --> 
+         <div class="bottom_content"> 
+          <div class="bottom expand_sidebar"> 
+            <span> Expand</span> 
+            <i class='bx bx-log-in' ></i> 
+          </div> 
+          <div class="bottom collapse_sidebar"> 
+            <span> Collapse</span> 
+            <i class='bx bx-log-out'></i> 
+          </div> 
+        </div>
+      </div>
+    </nav>
+
+
+    <main>
+        <section id="savedissue">
+          <div class="container">
+            <h2 style="display: flex;
+            justify-content: center;
+            align-items: center; color: #4070f4; margin-bottom: 20px;">Saved Information</h2>
+            <ul id="savedInfoList" style="padding: 20px; row-gap: 20px;"></ul>
+            <button id="clearBtn" style="margin-left: 500px;">Clear All</button>
+          </div>
+        </section>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              console.log('savedissue.html loaded');
+              const savedEntries = JSON.parse(localStorage.getItem('savedEntries')) || [];
+              const savedInfoList = document.getElementById('savedInfoList');
+  
+              function displayEntries() {
+                  savedInfoList.innerHTML = '';
+                  if (savedEntries.length > 0) {
+                      savedEntries.forEach((entry, index) => {
+                          const listItem = document.createElement('li');
+                          listItem.innerHTML = `
+                              Problem ${entry.problemNumber} (${entry.type}): Brand: ${entry.brand}, Issue: ${entry.issue}, Description: ${entry.description}
+                              
+                              <button style="margin-left:30px" onclick="editEntry(${index})">Edit</button>
+                              <button style="margin-left:20px"; onclick="deleteEntry(${index})">Delete</button>
+                              <br>
+                              <br>
+                          `;
+                          savedInfoList.appendChild(listItem);
+                      });
+                  } else {
+                      savedInfoList.textContent = 'No information saved.';
+                  }
+              }
+  
+             
+  
+              window.editEntry = function(index) {
+                  const entry = savedEntries[index];
+                  const brand = prompt("Edit Brand", entry.brand);
+                  const issue = prompt("Edit Issue", entry.issue);
+                  const description = prompt("Edit Description", entry.description);
+  
+                  if (brand !== null && issue !== null && description !== null) {
+                      savedEntries[index] = {
+                          ...entry, // Maintain the problem number and type
+                          brand: brand,
+                          issue: issue,
+                          description: description
+                      };
+                      localStorage.setItem('savedEntries', JSON.stringify(savedEntries));
+                      displayEntries();
+                  }
+              };
+  
+              window.deleteEntry = function(index) {
+                  savedEntries.splice(index, 1);
+                  localStorage.setItem('savedEntries', JSON.stringify(savedEntries));
+                  displayEntries();
+              };
+  
+              document.getElementById('clearBtn').addEventListener('click', function() {
+                  localStorage.removeItem('savedEntries');
+                  window.location.reload();
+              });
+  
+              displayEntries();
+          });
+      </script>
+      </main>
+
+      <script src="script.js"></script>
+    </body>
+    
+    
+  </html>

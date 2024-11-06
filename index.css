@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 110px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.content h1, .content p, .explore-btn{
+    animation: fadeInAnimation 7s ease;
+}
+
+.content h1 {
+    animation-delay: 0.4s;
+}
+
+.content p {
+    animation-delay: 0.4s;
+    
+}
+
+.explore-btn {
+    animation-delay: 0.4s;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #0073e6;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #0073e6;
+    color: #ffffff;
+    cursor: pointer;
+}

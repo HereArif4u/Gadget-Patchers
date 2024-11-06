@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/browse/boxicons@2.1.4/css/boxicons.css">
+    <title>Gadget Patchers</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <br>
+    <br>
+    <br>
+    <marquee scrollamount="5" bgcolor="white" height="25px"> | Gadget Patchers : Where gadgets get a second chance |</marquee>
+
+   <div id="mainer" style="font-size: 18px;">
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <img src="GPImages/GP.png" alt=""></i>Gadget Patchers
+      </div>
+
+      <div class="navbar_content">
+        <i class="bi bi-grid"></i>
+        <i class='bx bx-sun' id="darkLight"></i>
+        <i class='bx bx-bell' ></i>
+        <img src="GPImages/user.png" alt="" class="profile" />
+      </div>
+    </nav>
+
+    <!-- sidebar -->
+    <nav class="sidebar">
+      <div class="menu_content">
+        <ul class="menu_items">
+          <div class="menu_title menu_dahsboard">
+          </div>
+          <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+          <!-- start -->
+          <li class="item">
+            <a href="FIrst.html#home" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-home-alt"></i>
+              </span>
+             
+              <span class="navlink">Home</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </a>
+            
+            
+          
+            
+            <ul class="menu_items submenu">
+              <a href="#our Services" class="nav_link sublink">Our Services</a>
+              
+              <a href="#works" class="nav_link sublink">How Our<br>Website works?</a>
+              <a href="#warrenty" class="nav_link sublink">Issued Warrenty's</a>
+              <a href="#FAQ's" class="nav_link sublink">FAQ's</a>
+            </ul>
+          <!-- end -->
+
+          <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+          <!-- start -->
+          <li class="item">
+            <a href="saveyourissue.html#save" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-save"></i>
+              </span>
+              <span class="navlink">Save Your Repair<br>Issue</span>
+            </a>
+
+          <li class="item">
+            <a href="nearbystore.html#repairstore" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-map"></i>
+              </span>
+              <span class="navlink">Your Nearby Repair<br>Store's</span>
+            </a>
+
+            <li class="item">
+              <a href="repairstatus.html#status" class="nav_link submenu_item">
+                <span class="navlink_icon">
+                  <i class="bx bx-loader-circle"></i>
+                </span>
+                <span class="navlink">Status of Your<br>Repair Issue</span>
+              </a>
+  
+          <!-- end -->
+        </ul>
+
+
+        <ul class="menu_items">
+          <div class="menu_title menu_setting"></div>
+           
+          <li class="item">
+            <a href="savedissue.html#saved" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-collection"></i>
+              </span>
+              <span class="navlink">Saved Repair Issue's</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="account.html#account" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-user"></i>
+              </span>
+              <span class="navlink">Profile</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-flag"></i>
+              </span>
+              <span class="navlink">Notice</span>
+            </a>
+          </li>
+        </ul>
+         <!-- Sidebar Open / Close --> 
+         <div class="bottom_content"> 
+          <div class="bottom expand_sidebar"> 
+            <span> Expand</span> 
+            <i class='bx bx-log-in' ></i> 
+          </div> 
+          <div class="bottom collapse_sidebar"> 
+            <span> Collapse</span> 
+            <i class='bx bx-log-out'></i> 
+          </div> 
+        </div>
+      </div>
+    </nav>
+
+    <main>
+        <section id="repairstore">
+          <div class="container">
+            <h2 style="display: flex;
+            justify-content: center;
+            align-items: center; color: #4070f4;">Select Problem</h2>
+            <label for="problemSelect">Choose a problem:</label>
+            <select id="problemSelect">
+                <option value="">--Select a problem--</option>
+            </select>
+            <div id="problemDetails"></div>
+            <button id="enableLocationBtn" style="padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            margin: 20px 0;">Enable Your Location</button>
+            <div id="map" style=" height: 400px;
+            width: 100%;
+            margin-top: 20px;"></div>
+            <div id="repairShopDetails" style="display: none;" ></div>
+        </div>
+
+
+        <div id="bookingModal" class="modal">
+          <div class="modal-content" style="margin-left: 200px;
+          padding: 100px;">
+              <span class="close">&times;</span>
+              <h2>Book Appointment at <span id="storeName"></span></h2>
+              <p>Cost Estimate: <span id="costEstimate"></span></p>
+              <form id="bookingForm">
+                  <label for="bookingDate">Choose a date:</label>
+                  <input type="date" id="bookingDate" name="bookingDate" required><br>
+                  <label for="bookingTime">Choose a time:</label>
+                  <input type="time" id="bookingTime" name="bookingTime" required><br>
+                  <button type="submit">Book (50rs fee)</button>
+              </form>
+          </div>
+      </div>
+
+
+      </section>
+  
+
+      <style>
+        #repairShopDetails {
+    padding: 10px;
+    
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+#repairShopDetails h3 {
+    margin-top: 0;
+}
+
+#repairShopDetails p {
+    margin: 5px 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+      </style>
+
+
+
+      </main>
+      <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0zf4aLir00PyPfwVAF-af5iq5MO_XXo4&libraries=places&callback=initMap"></script>
+      <script src="nearbystore.js"></script>
+      <script src="script.js"></script>
+    </body>
+
+  </html>

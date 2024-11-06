@@ -1,0 +1,69 @@
+/*Account Page*/
+ 
+.All{
+	height: 400px;
+	width: 1000px;
+	margin-left:140px;
+    margin-top: 20px;
+}
+
+.All-one{
+  color:#4070f4 ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.All-in-one{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  font-size: 120%;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  row-gap: 25px;
+  column-gap: 45px;
+}
+
+.form-control{
+  font-size: large;
+}
+
+.All-in-once {
+    background-color: white;
+    padding: 40px 30px 30px 40px;
+    box-shadow: 0 0.2rem 0.6rem rgba(50, 50, 50, 0.15);
+  
+  }
+  
+  .form-group span {
+    color: #000000f6;
+  }
+
+  p{
+    color: #000000f6;
+  }
+  
+  .user-avatar {
+    width: 140px;
+    height: 140px;
+    margin: auto;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+  
+    
+    img {
+      width: 150px;
+    }
+  }
+
+  @media screen and (max-width: 500px)
+  {
+    .uxa-form-group{
+      width: 500px;
+    }
+  }
+

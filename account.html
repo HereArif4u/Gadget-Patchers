@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/browse/boxicons@2.1.4/css/boxicons.css">
+    <title>Gadget Patchers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="account.css">
+  </head>
+  <body>
+    <br>
+    <br>
+    <br>
+    <marquee scrollamount="5" bgcolor="white" height="25px"> | Gadget Patchers : Where gadgets get a second chance |</marquee>
+
+   
+    <div id="mainer" style="font-size: 18px;">
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <img src="GPImages/GP.png" alt=""></i>Gadget Patchers
+      </div>
+
+      <div class="navbar_content">
+        <i class="bi bi-grid"></i>
+        <i class='bx bx-sun' id="darkLight"></i>
+        <i class='bx bx-bell' ></i>
+        <img src="GPImages/user.png" alt="" class="profile" />
+      </div>
+    </nav>
+
+    <!-- sidebar -->
+    <nav class="sidebar">
+      <div class="menu_content">
+        <ul class="menu_items">
+          <div class="menu_title menu_dahsboard">
+          </div>
+          <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+          <!-- start -->
+          <li class="item">
+            <a href="First.html#home" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-home-alt"></i>
+              </span>
+             
+              <span class="navlink">Home</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </a>
+            
+            
+          
+            
+            <ul class="menu_items submenu">
+              <a href="#ourservices" class="nav_link sublink">Our Services</a>
+              
+              <a href="#works" class="nav_link sublink">How Our<br>Website works?</a>
+              <a href="#warrenty" class="nav_link sublink">Issued Warrenty's</a>
+              <a href="#FAQ's" class="nav_link sublink">FAQ's</a>
+            </ul>
+          <!-- end -->
+
+          <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+          <!-- start -->
+          <li class="item">
+            <a href="saveyourissue.html#save" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-save"></i>
+              </span>
+              <span class="navlink">Save Your Repair<br>Issue</span>
+            </a>
+
+          <li class="item">
+            <a href="nearbystore.html#repairstore" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-map"></i>
+              </span>
+              <span class="navlink">Your Nearby Repair<br>Store's</span>
+            </a>
+
+            <li class="item">
+              <a href="repairstatus.html#status" class="nav_link submenu_item">
+                <span class="navlink_icon">
+                  <i class="bx bx-loader-circle"></i>
+                </span>
+                <span class="navlink">Status of Your<br>Repair Issue</span>
+              </a>
+  
+          <!-- end -->
+        </ul>
+
+
+        <ul class="menu_items">
+          <div class="menu_title menu_setting"></div>
+           
+          <li class="item">
+            <a href="savedissue.html#saved" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-collection"></i>
+              </span>
+              <span class="navlink">Saved Repair Issue's</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="account.html#account" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-user"></i>
+              </span>
+              <span class="navlink">Profile</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-flag"></i>
+              </span>
+              <span class="navlink">Notice</span>
+            </a>
+          </li>
+        </ul>
+         <!-- Sidebar Open / Close --> 
+         <div class="bottom_content"> 
+          <div class="bottom expand_sidebar"> 
+            <span> Expand</span> 
+            <i class='bx bx-log-in' ></i> 
+          </div> 
+          <div class="bottom collapse_sidebar"> 
+            <span> Collapse</span> 
+            <i class='bx bx-log-out'></i> 
+          </div> 
+        </div>
+      </div>
+    </nav>
+
+
+    <main>
+        <section id="account">
+          <div class="container">
+            <div class="All">
+              <div class="All-in-once">
+          
+                <h1 class="All-one">Your Profile</h1><br>
+                <!-- single sentence description -->
+                <!-- /single sentence description -->
+                
+                <div class="user-avatar">
+                  <img src="GPImages/user.png" alt="Upload photo">
+                </div>
+              
+                
+                <form class="All-in-one">
+          
+                  <div class="form-group">
+                   <span><b><p>Enter Your Full Details :-</p></b></span>
+                    <label for="FirstName" style="color: black;">First Name :</label>
+                    <input type="text" class="form-control" id="FirstName">
+                  </div>
+        
+                  <div class="form-group">
+                    <span><label for="LastName" style="color: black;">Last Name :</label></span>
+                    <input type="text" class="form-control" id="LastName">
+                  </div>
+
+                  <div class="form-group">
+                    <span><label for="Mobile" style="color: black;">Your Mobile Number :</label><span>
+                    <input type="tel" class="form-control" id="Mobile" maxlength="10"  aria-describedby="emailHelp">
+                  </div>
+          
+                  <div class="form-group">
+                    <span><label for="exampleInputEmail1" style="color: black;">Your Email Address :</label></span>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"><br>
+                  </div>
+
+                   
+                  <div class="form-group">
+                    <span><label for="country" style="color: black;">Country :</label></span>  
+                    <input type="text" class="form-control" id="country">
+                  </div>
+            
+                   
+                  <div class="form-group">
+                    <span><label for="state" style="color: black;">State :</label></span>  
+                    <input type="text" class="form-control" id="state">
+                  </div>
+
+                  <div class="form-group">
+                    <span><label for="city" style="color: black;">City :</label></span>  
+                    <input type="text" class="form-control" id="city">
+                  </div>
+                 
+                 
+
+                  <div class="form-group">
+                    <span><label for="pin" style="color: black;">Pin Code :</label></span>
+                    <input type="text" class="form-control" id="pin" maxlength="6" size="6">
+                  </div>
+
+                  <div class="form-group">
+                    <span><label for="address" style="color: black;">Address :</label></span>
+                    <input type="text" class="form-control" id="address" maxlenght="100" size="100" placeholder="District,Area,Street,D.no">
+                  </div>
+
+
+                  <div class="form-group">
+                    <span><b><p>Schedule Your Avaliable Data&Time :-</p></b></span>
+                    <span><label for="Date" style="color: black;">Date :</label></span>
+                    <input type="Date" class="form-control" id="Date" maxlength="6" size="6">
+                    <span><label for="Time" style="color: black;">Time :</label></span>
+                    <input type="Time" class="form-control" id="Time" maxlength="6" size="6">
+                  </div>
+                </form>
+                <br>
+                
+                <button class="btn btn-success" (click)="save()"><i class="fa fa-save mr-2"></i> Update Profile Details</button>
+          
+              </div>
+            </div>
+          </div>
+    </section>
+      </main>
+      
+
+      <script src="script.js"></script>
+    </body>
+    
+    
+  </html>

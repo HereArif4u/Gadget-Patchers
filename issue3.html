@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/browse/boxicons@2.1.4/css/boxicons.css">
+    <title>Gadget Patchers</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <br>
+    <br>
+    <br>
+    <marquee scrollamount="5" bgcolor="white" height="25px"> | Gadget Patchers : Where gadgets get a second chance |</marquee>
+
+    
+
+
+    <div id="mainer">
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <img src="GPImages/GP.png" alt=""></i>Gadget Patchers
+      </div>
+
+      <div class="navbar_content">
+        <i class="bi bi-grid"></i>
+        <i class='bx bx-sun' id="darkLight"></i>
+        <i class='bx bx-bell' ></i>
+        <img src="GPImages/user.png" alt="" class="profile" />
+      </div>
+    </nav>
+
+    <!-- sidebar -->
+    <nav class="sidebar" style="font-size: 18px;">
+      <div class="menu_content">
+        <ul class="menu_items">
+          <div class="menu_title menu_dahsboard">
+          </div>
+          <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+          <!-- start -->
+          <li class="item">
+            <a href="First.html#home" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-home-alt"></i>
+              </span>
+             
+              <span class="navlink">Home</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </a>
+            
+            
+          
+            
+            <ul class="menu_items submenu">
+              <a href="First.html#ourservices" class="nav_link sublink">Our Services</a>
+              
+              <a href="FIrst.html#works" class="nav_link sublink">How Our<br>Website works?</a>
+              <a href="First.html#warrenty" class="nav_link sublink">Issued Warrenty's</a>
+              <a href="First.html#FAQ's" class="nav_link sublink">FAQ's</a>
+            </ul>
+          <!-- end -->
+
+          <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+          <!-- start -->
+          <li class="item">
+            <a href="saveyourissue.html#save" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-save"></i>
+              </span>
+              <span class="navlink">Save Your Repair<br>Issue</span>
+            </a>
+
+          <li class="item">
+            <a href="nearbystore.html#repairstore" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-map"></i>
+              </span>
+              <span class="navlink">Your Nearby Repair<br>Store's</span>
+            </a>
+
+            <li class="item">
+              <a href="repairstatus.html#status" class="nav_link submenu_item">
+                <span class="navlink_icon">
+                  <i class="bx bx-loader-circle"></i>
+                </span>
+                <span class="navlink">Status of Your<br>Repair Issue</span>
+              </a>
+  
+          <!-- end -->
+        </ul>
+
+
+        <ul class="menu_items">
+          <div class="menu_title menu_setting"></div>
+           
+          <li class="item">
+            <a href="savedissue.html#saved" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-collection"></i>
+              </span>
+              <span class="navlink">Saved Repair Issue's</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="account.html#account" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-user"></i>
+              </span>
+              <span class="navlink">Profile</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-flag"></i>
+              </span>
+              <span class="navlink">Notice</span>
+            </a>
+          </li>
+        </ul>
+         <!-- Sidebar Open / Close --> 
+         <div class="bottom_content"> 
+          <div class="bottom expand_sidebar"> 
+            <span> Expand</span> 
+            <i class='bx bx-log-in' ></i> 
+          </div> 
+          <div class="bottom collapse_sidebar"> 
+            <span> Collapse</span> 
+            <i class='bx bx-log-out'></i> 
+          </div> 
+        </div>
+      </div>
+    </nav>
+  
+
+    <main>
+      <section id="save"><h2>Select your Repair Gadget</h2>
+        <div class="row">
+        <div class="GadgetImages">
+          <a href="issue1.html#first">
+            <i id="#first"></i>
+      <img src="GPImages/4.png" alt="Smartphone Repair"  class="center" width="300" height="300" ></div></a>
+      <div class="GadgetImages">
+        <a href="issue2.html#second">
+          <i id="#second"></i>
+          <img src="GPImages/5.png" alt="Laptop Repair" class="center" width="300" height="300"></div></a>
+        <div class="GadgetImages">
+          <a href="issue3.html#Third">
+            <i id="#Third"></i>
+          <img src="GPImages/6.png" alt="SmartWatch Repair"  class="center" width="300" height="300"></div></a>
+        </div>
+      </section>
+        <br>
+        <br>
+      <form class="ThirdForm" id="smartwatchForm">
+        <h2>Your SmartWatch details</h2><br>
+           <label class="One" for="smartwatchBrand">SmartWatch Brand :</label>
+           <input type="text" id="smartwatchBrand"  name="smartwatchBrand" required style="font-size:16px;">
+      <br>
+      <br>
+           <label class="One" for="smartwatchIssue">Select your SmartWatch issue :</label>
+           <select id="smartwatchIssue" name="smartwatchIssue" required style="font-size:16px;">
+            <option value="Select">-Select-</option>
+            <option value="Display Issue">Display Issue</option>
+            <option value="Battery Issue">Battery Issue</option>
+            <option value="Charging Issue">Charging Issue</option>
+            <option value="Camera Issue">Camera Issue</option>
+            <option value="Speaker Issue">Speaker Issue</option>
+            <option value="Other Issue">Other Issue</option>
+           </select>
+      <br>
+      <br>
+           <label class="One" for="smartwatchDescription">Describe your issue :</label><br>
+           <textarea id="smartwatchDescription" name="smartwatchDescription" placeholder="Write your repair issue in shortform"  rows="4" cols="50" required style="font-size: 16px;"></textarea>
+      <br>
+      <button type="submit"  style="font-size: 15px;
+      border: 2px solid black;
+      border-color: #2196F3;
+      color: dodgerblue;
+      padding: 7px 20px 7px 20px ;
+      border-radius: 10px;
+      background-color: whitesmoke;
+      margin-left: 160px; ">SAVE</button>
+      <br>
+      <br>
+      <br>
+      <br>
+          
+
+      </form>
+      
+    </main>
+    <script src="issues.js"></script>
+    <script src="script.js"></script>
+  </body>
+  
+  
+</html>
